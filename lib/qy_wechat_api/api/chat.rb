@@ -25,7 +25,7 @@ module QyWechatApi
       #     "safe":0
       # }
 
-      def new_send_text(chatid, content, safe)
+      def new_send_text(chat_id, content, safe)
         option = {
           chatid: chat_id,
           msgtype: 'text',
