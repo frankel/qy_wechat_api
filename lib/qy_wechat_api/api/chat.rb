@@ -31,7 +31,7 @@ module QyWechatApi
           msgtype: 'text',
           text: {
             content: content
-          }
+          },
           safe: safe
         }
         http_post("send", option)
