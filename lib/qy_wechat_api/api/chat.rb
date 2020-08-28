@@ -15,6 +15,28 @@ module QyWechatApi
         http_post("create", option)
       end
 
+
+      # {
+      #     "chatid": "CHATID",
+      #     "msgtype":"text",
+      #     "text":{
+      #         "content" : "你的快递已到\n请携带工卡前往邮件中心领取"
+      #     },
+      #     "safe":0
+      # }
+
+      def new_send_text(chatid, content, safe)
+        option = {
+          chatid: chat_id,
+          msgtype: 'text',
+          text: {
+            content: content
+          }
+          safe: safe
+        }
+        http_post("send", option)
+      end
+
       # 获取会话
       def get(chat_id)
         http_get("get", agentid: chat_id)
