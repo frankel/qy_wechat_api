@@ -94,7 +94,7 @@ module QyWechatApi
         end
 
         def base_url
-          "/chat"
+          "/appchat"
         end
 
     end
